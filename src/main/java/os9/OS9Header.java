@@ -374,7 +374,7 @@ public class OS9Header implements StructConverter {
 		struct.add(DWORD, 4, "usage", null);
 		struct.add(DWORD, 4, "symbol", null);
 		
-		struct.add(VOID, 14, null, null);
+		struct.add(BYTE, 14, null, null);       // dummy bytes (VOID causes IllegalArgumentException)
 		struct.add(WORD, 2, "parity", null);
 
 		if (exec != null) {
